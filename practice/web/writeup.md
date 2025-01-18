@@ -85,3 +85,9 @@ https://play.picoctf.org/practice/challenge/355
     - SecretGenerator.java を見ると`return "1234";`してるだけの箇所あり
     - ソースコードのコメントアウト検索するのアリかも
 - `base/books/pdf/5`に作成した jwt ででアクセスして flag ゲット
+
+### find me
+
+https://play.picoctf.org/practice/challenge/349
+
+- easy 過ぎたため特になし
