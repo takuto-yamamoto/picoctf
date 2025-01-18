@@ -49,3 +49,10 @@ const user = await User.findOne({
 - 上記コードで email/password がサニタイズされないことが確認できる
 - MongoDB において`"{ \"$ne\": null }"`とすることで、null でなければ OK 条件を作成できる
 - 返却値の token を base64 デコードして flag を取得
+
+### SOAP
+
+https://play.picoctf.org/practice/challenge/376
+
+- `/etc/passwd`をなんとか確認する問題
+- 一般的な XXE 攻撃
