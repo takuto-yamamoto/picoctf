@@ -82,6 +82,12 @@
 - IDA
   - 汎用デバッガ
 
+## pwnable
+
+- pwntools
+  - python の tcp 通信ライブラリ
+  - 標準の socket でも同じことができるがちょっと面倒
+
 ## Forensics
 
 - wireshark
