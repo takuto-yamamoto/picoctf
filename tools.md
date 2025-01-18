@@ -103,6 +103,20 @@
   - `fls example.img`で構造確認
   - `icat example.img XX`で指定した inode 番号(エントリ番号)のファイルの内容を出力する
     - `icat drive.img 36-128-1 > extracted.jpg`
+- steghide
+  - 電子透かしの作成と復元
+  - パスフレーズが必要
+  - rockyou.txt と組み合わせて辞書攻撃が可能(要スクリプト、stegseek なら組み込みで実施できる)
+- exiftool
+  - cli で exif が確認可能
+- Aperi'Solve
+  - 画像の解析をいい感じにやってくれるので基本これがあれば OK
+  - ただし本番使えないかも
+  - strings メソッドは併用することおすすめ(Aperi'Solve だと最初しかパッと見えない、CLI コマンド出力だと grep できる)
+- strong-qr-reader
+  - テキストファイルから QR 読み取り
+  - 暗モジュールは`X`、明モジュールは`0`など(詳細は https://github.com/waidotto/strong-qr-decoder)
+  - 不明モジュールとして`?`が使用可能
 
 ## チェックしておくツール
 
@@ -114,8 +128,5 @@
 - process hacker
 - autoruns
 - regshot
-- steghide
 - sonic visualizer
-- image-exiftool
 - ghidra
-- Aperi'Solve
