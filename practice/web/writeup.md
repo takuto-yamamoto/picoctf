@@ -65,3 +65,23 @@ https://play.picoctf.org/practice/challenge/358
 - ご丁寧にも構文を返してくれる
   - `SELECT id FROM users WHERE password = 'password' AND username = 'username'`
 - password に`' OR '1'='1' LIMIT 1--`を入れれば OK
+
+### Match The Regex
+
+https://play.picoctf.org/practice/challenge/356
+
+- easy 過ぎたため特になし
+
+### Java Code Analysis!?!
+
+https://play.picoctf.org/practice/challenge/355
+
+- https://jwt.io/ で jwt トークンを確認する
+- payload と秘密鍵があれば良さそう
+  - payload
+    - role を Admin にするだけだとだめ
+    - email を admin, userId を 2 に変更 (初期ユーザーコード参照)
+  - 秘密鍵
+    - SecretGenerator.java を見ると`return "1234";`してるだけの箇所あり
+    - ソースコードのコメントアウト検索するのアリかも
+- `base/books/pdf/5`に作成した jwt ででアクセスして flag ゲット
