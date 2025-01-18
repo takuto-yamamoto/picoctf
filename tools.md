@@ -45,6 +45,7 @@
     - `<>+-.,[]`の 8 文字でポインタを操作しながら実装する
   - whitespace
     - ` `, `\t`, `\n`のみで構成される言語
+    - https://vii5ard.github.io/whitespace/で実行可能
   - piet
     - ドットでコーディングする(抽象画みたいになる)
   - lazy k
