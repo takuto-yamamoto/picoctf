@@ -27,3 +27,10 @@ https://play.picoctf.org/practice/challenge/412
 
 - 値 a, b に基づいて暗号化アルゴリズムを埋めていく
 - 逆順にアルゴリズムを書いていけば OK(xor は 2 回繰り返せば元通りになることに注意)
+
+### C3
+
+https://play.picoctf.org/practice/challenge/407
+
+- アルゴリズムに則って複合アルゴリズムを書く
+- 複合した結果が暗号文であり複合アルゴリズムの python ファイルにもなるので自分自身を複合
