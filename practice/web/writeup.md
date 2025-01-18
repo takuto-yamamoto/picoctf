@@ -56,3 +56,12 @@ https://play.picoctf.org/practice/challenge/376
 
 - `/etc/passwd`をなんとか確認する問題
 - 一般的な XXE 攻撃
+
+### More SQLi
+
+https://play.picoctf.org/practice/challenge/358
+
+- SQL インジェクション問題
+- ご丁寧にも構文を返してくれる
+  - `SELECT id FROM users WHERE password = 'password' AND username = 'username'`
+- password に`' OR '1'='1' LIMIT 1--`を入れれば OK
