@@ -25,6 +25,12 @@
     - jwt のエンコード/デコード
   - https://github.com/ticarpi/jwt_tool
     - jwt の改ざんや既知の攻撃
+- php
+  - サーバサイドレンダリングを実現する言語
+  - サーバ側で system コマンド実行 -> html 内に結果を埋め込んで表示
+- robots.txt
+  - サーバのファイル構成がわかる場合もある
+  - instructions.txt とかある場合も
 
 ## Crypto
 
