@@ -30,3 +30,22 @@ https://play.picoctf.org/practice/challenge/445
 
 - robots.txt を見ると`instruction.txt`と`upload/`がある
 - instruction.txt によると、ファイルの最初の数バイトに`PNG`があれば png ファイルという判定
+
+### NoSQL Injection
+
+https://play.picoctf.org/practice/challenge/443
+
+```js
+const user = await User.findOne({
+  email:
+    email.startsWith('{') && email.endsWith('}') ? JSON.parse(email) : email,
+  password:
+    password.startsWith('{') && password.endsWith('}')
+      ? JSON.parse(password)
+      : password,
+});
+```
+
+- 上記コードで email/password がサニタイズされないことが確認できる
+- MongoDB において`"{ \"$ne\": null }"`とすることで、null でなければ OK 条件を作成できる
+- 返却値の token を base64 デコードして flag を取得
