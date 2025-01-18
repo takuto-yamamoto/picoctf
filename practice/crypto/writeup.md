@@ -34,3 +34,24 @@ https://play.picoctf.org/practice/challenge/407
 
 - アルゴリズムに則って複合アルゴリズムを書く
 - 複合した結果が暗号文であり複合アルゴリズムの python ファイルにもなるので自分自身を複合
+
+### rotation
+
+https://play.picoctf.org/practice/challenge/373
+
+- ただのシーザー暗号だったため省略
+
+### Read My Cert
+
+https://play.picoctf.org/practice/challenge/367
+
+- base64 かけたらフラグを発見
+- 実際は`openssl req -in readmycert.csr -noout -text`で証明書の詳細を確認可能
+
+### HideToSee
+
+https://play.picoctf.org/practice/challenge/351
+
+- 画像を開くと Atbash 暗号の文字
+- 隠れんぼだからステガノグラフィー？ -> ビンゴ
+- 暗号文のテキストファイルを Atbash してフラグ
