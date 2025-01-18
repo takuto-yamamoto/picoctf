@@ -20,3 +20,10 @@ https://play.picoctf.org/practice/challenge/422
 - RSA 暗号の乗法準同型性を利用(ここら辺あまりよくわかってない)
 - 2(バイト列なので CLI から直接入力できないことに注意)を暗号化し、パスワードとの積をとる
 - パスワードとの積を復号する
+
+### Custom encryption
+
+https://play.picoctf.org/practice/challenge/412
+
+- 値 a, b に基づいて暗号化アルゴリズムを埋めていく
+- 逆順にアルゴリズムを書いていけば OK(xor は 2 回繰り返せば元通りになることに注意)
