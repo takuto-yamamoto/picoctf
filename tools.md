@@ -17,8 +17,8 @@
 - curl
   - url リクエストツール
 - SQLi チートシート類
-  - [PortSwigger](https://portswigger.net/web-security/sql-injection/cheat-sheet)
-  - [invicti](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/)
+  - https://portswigger.net/web-security/sql-injection/cheat-sheet
+  - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
   - HackTricks
 - jwt 系
   - https://jwt.io
@@ -81,13 +81,18 @@
 - OllyDbg
   - C/C++デバッガ
 - IDA
-  - 汎用デバッガ
+  - 実行可能ファイル(ELF)をアセンブリに直してデバッグする
+- objdump
+  - 実行可能ファイルを機械ごとアセンブリにする
+  - `objdump -S --no-show-run-insn hoge.bin`でソースコード+アセンブリとアドレスのみを表示(機械語なし)
+  - `-R`オプションでリロケーションテーブル(GOT)アドレスを調べることができる
 
 ## pwnable
 
 - pwntools
   - python の tcp 通信ライブラリ
   - 標準の socket でも同じことができるがちょっと面倒
+  - FmtStr クラスや fmtstr_payload 関数でフォーマット文字列攻撃を楽に実施できる
 
 ## Forensics
 
@@ -130,6 +135,8 @@
   - ファイルシグネチャ: https://qiita.com/forestsource/items/15933888466ba9c3f048
   - zip のヘッダは 504B
   - 等間隔にダミーを配置しつつファイルのバイナリが並んでる場合もあるのでシグネチャをよくみる
+- sonic visualizer
+  - 音声ファイルの可視化
 
 ## チェックしておくツール
 
@@ -139,5 +146,4 @@
 - process hacker
 - autoruns
 - regshot
-- sonic visualizer
 - ghidra
