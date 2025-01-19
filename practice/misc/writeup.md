@@ -22,6 +22,12 @@
   - バイナリ演算(`<<`, `>>`, `&`, `|`, `+`, `*`)
   - `<<`は 8 桁から 9 桁、`+`と`*`は一旦 decimal に戻して計算
   - Cyberchef の Base 操作で 10 進数から他の進数に変換できる
+- repetation
+  - base64 をひたすらかけていく
+- big zip
+  - `grep -roE 'picoCTF{.*}'`
+- first find
+  - `grep -roE 'picoCTF{.*}'` もしくは `find . -type f -exec strings {} + | grep -oE 'picoCTF{.*}'`
 
 ## Medium
 

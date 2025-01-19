@@ -30,6 +30,8 @@ https://play.picoctf.org/practice/challenge/445
 
 - robots.txt を見ると`instruction.txt`と`upload/`がある
 - instruction.txt によると、ファイルの最初の数バイトに`PNG`があれば png ファイルという判定
+- シグネチャだけ PNG にした実行可能な php ファイルを生成し RCE
+  - ただし.png をファイル名に含めないとエラーになるので`hoge.png.php`
 
 ### NoSQL Injection
 
