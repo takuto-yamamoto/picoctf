@@ -101,8 +101,11 @@
 - sleuth kit
   - img ファイルの中身を操作するツール
   - `fls example.img`で構造確認
+    - `-o`でオフセット指定、`-r`で再帰的に確認、任意で`inode`指定可能
   - `icat example.img XX`で指定した inode 番号(エントリ番号)のファイルの内容を出力する
     - `icat drive.img 36-128-1 > extracted.jpg`
+    - `-o`でオフセット指定、`-r`で再帰的に確認、任意で`inode`指定可能
+  - 本番で使えないかも
 - steghide
   - 電子透かしの作成と復元
   - パスフレーズが必要
@@ -117,12 +120,20 @@
   - テキストファイルから QR 読み取り
   - 暗モジュールは`X`、明モジュールは`0`など(詳細は https://github.com/waidotto/strong-qr-decoder)
   - 不明モジュールとして`?`が使用可能
+- 青空白猫
+  - うさみみハリケーンというソフトに同梱されている
+  - ビット抽出を実施してステガノグラフィーを検出できる(ヘッダ以上を検出してくれる)
+  - 本番では使用できないので GPT に Python コードを書いてもらう
+- stirling / bz
+  - バイナリエディタ
+- 各ファイルのシグネチャ
+  - ファイルシグネチャ: https://qiita.com/forestsource/items/15933888466ba9c3f048
+  - zip のヘッダは 504B
+  - 等間隔にダミーを配置しつつファイルのバイナリが並んでる場合もあるのでシグネチャをよくみる
 
 ## チェックしておくツール
 
 - John The Ripper
-- bz
-- stirling
 - process monitor
 - process explorer
 - process hacker
